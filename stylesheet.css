@@ -99,7 +99,7 @@ body {
   fill: #d4f1f4; /* Adjust the color to match your wave color or as desired */
   /* --s: 50px; /* control the shape (can be percentage) */
 
-  width: 100px;
+  /* width: 100px;
   aspect-ratio: 5/3;
   clip-path: polygon(0 100%,0 calc(100% - var(--s)),50% 0,100% calc(100% - var(--s)),100% 100%,50% var(--s));
   background: #99d1d4; */
