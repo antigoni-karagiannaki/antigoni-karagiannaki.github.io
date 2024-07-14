@@ -1,58 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;800&display=swap');
 
-*, *:before, *:after{
-  margin:0;
-  padding: 0;
-  box-sizing:border-box;
-}
-.circle{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /*transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
-  border: 5px solid #FFFFFF;*/
-  box-shadow: 0 0 0 5px #4973ff;
-  
-  overflow: hidden;
-}
-.wave{
-  position: relative;
-  top: 0;
+
+/* Waves Animation start*/
+body { 
   width: 100%;
-  height: 100%;
-  background: #2C74B3;
-  border-radius: 50%;
-  box-shadow: inset 0 0 50px 0 rgba(0, 0, 0, 0.5);
-}
-.wave:before,
-.wave:after{
-  content:'';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 200%;
-  height: 200%;
-  background: black;
-  transform: translate(-50%, -75%);
-}
-.wave:before{
-  border-radius: 45%;
-  background: rgba(255, 255, 255, 1);
-  animation: animate 5s linear infinite;
-}
-.wave:after{
-  border-radius: 40%;
-  background: rgba(255, 255, 255, 0.5);
-  animation: animate 10s linear infinite;
+  background-color: #0a0a0a;
+  color: #d4f1f4;
 }
 
-@keyframes animate{
-  0%{
-    transform: translate(-50%, -75%) rotate(0deg);
+.hero_area {
+  position: relative;
+  height: 15pc;
+  width: 100%;
+  /* background-color: black; */
+}
+
+.waves {
+  position: absolute;
+  width: 100%;
+  height: 15vh;
+  min-height: 100px;
+  max-height: 150px;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+  fill: rgb(36, 228, 222);
+}
+
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+  opacity: 0.6;
+}
+
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+  opacity: 0.8;
+}
+
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+  fill: aqua;
+  opacity: 0.5;
+}
+
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+  fill: rgba(103, 255, 247, 0.956);
+  opacity: 0.8;
+}
+
+@keyframes move-forever {
+  0% {
+      transform: translate3d(-90px, 0, 0);
   }
-  100%{
-    transform: translate(-50%, -75%) rotate(360deg);
+
+  100% {
+      transform: translate3d(85px, 0, 0);
   }
 }
+
+/*Shrinking for mobile*/
+
+@media (max-width: 768px) {
+  .waves {
+      height: 40px;
+      min-height: 40px;
+  }
+}
+
+@keyframes splash {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(0) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1); /* Adjust for wave movement */
+  }
+}
+
+.splash {
+  position: absolute;
+  opacity: 100%;
+  bottom: 15px;
+  /*left: 50%; /* Adjust or randomize for each splash */
+  width: 20px;
+  height: 10px;
+  background-color: #d4f1f4; /* Lighter color to represent the splash */
+  border-radius: 50%;
+  transform: translateX(-50%);
+  animation: splash 1s infinite ease-in-out;
+  fill: #d4f1f4; /* Adjust the color to match your wave color or as desired */
+  --s: 50px; /* control the shape (can be percentage) */
+
+  width: 100px;
+  aspect-ratio: 5/3;
+  clip-path: polygon(0 100%,0 calc(100% - var(--s)),50% 0,100% calc(100% - var(--s)),100% 100%,50% var(--s));
+  background: #99d1d4;
+}
+
+
+.splash::before, .splash::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 20px; /* Half of the .splash width to create wave peaks */
+  height: 20px;
+  background-color: #d4f1f4; /* Wave color */
+  border-radius: 50%;
+}
+
+.splash::before {
+  left: 0;
+  transform: translateX(-10px) translateY(10px); /* Adjust to shape the wave */
+}
+
+.splash::after {
+  right: 0;
+  transform: translateX(10px) translateY(10px); /* Adjust to shape the wave */
+}
+/* Waves Animation end*/
+
