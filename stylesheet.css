@@ -73,7 +73,7 @@ body {
       min-height: 40px;
   }
 }
-
+/*
 @keyframes splash {
   0%, 100% {
     opacity: 0;
@@ -83,8 +83,8 @@ body {
     opacity: 1;
     transform: translateY(-20px) scale(1); /* Adjust for wave movement */
   }
-}
-
+}*/
+/*
 .splash {
   position: absolute;
   opacity: 100%;
@@ -105,7 +105,8 @@ body {
   background: #99d1d4; */
 }
 
-
+*/
+/*
 .splash::before, .splash::after {
   content: '';
   position: absolute;
@@ -114,16 +115,16 @@ body {
   height: 20px;
   background-color: #d4f1f4; /* Wave color */
   border-radius: 50%;
-}
-
+}*/
+/*
 .splash::before {
   left: 0;
   transform: translateX(-10px) translateY(10px); /* Adjust to shape the wave */
-}
-
+}  */
+/*
 .splash::after {
   right: 0;
   transform: translateX(10px) translateY(10px); /* Adjust to shape the wave */
-}
+}*/
 /* Waves Animation end*/
 
