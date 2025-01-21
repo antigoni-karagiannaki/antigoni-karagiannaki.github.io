@@ -1,10 +1,10 @@
-/* CSS styles for the portfolio website */
+/* Updated CSS styles to resemble BreezyCV layout */
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #ffffff;
-    background-color: #2c2c2c;
+    background-color: #1c1c1c;
     display: flex;
     height: 100vh;
     overflow: hidden;
@@ -16,55 +16,70 @@ body {
 }
 
 .sidebar {
-    width: 20%;
-    background-color: #3a3a3a;
-    padding: 20px;
+    width: 25%;
+    background-color: #282828;
+    padding: 30px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sidebar .profile {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .sidebar .profile img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    border: 4px solid #4285f4;
 }
 
 .sidebar h1 {
-    font-size: 20px;
+    font-size: 24px;
     margin: 10px 0;
 }
 
 .sidebar p {
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.sidebar .social-icons {
+    display: flex;
+    gap: 15px;
 }
 
 .sidebar .social-icons a {
-    display: inline-block;
-    margin: 0 10px;
     text-decoration: none;
     color: #ffffff;
     font-size: 18px;
 }
 
 .sidebar .cv-btn {
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #4285f4;
     border: none;
     color: #ffffff;
     cursor: pointer;
     font-size: 14px;
     border-radius: 5px;
+    margin-bottom: 30px;
+    transition: background-color 0.3s;
+}
+
+.sidebar .cv-btn:hover {
+    background-color: #357ae8;
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 .sidebar ul li {
@@ -75,76 +90,118 @@ body {
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #4285f4;
 }
 
 main {
     flex: 1;
-    padding: 20px;
+    padding: 30px;
     overflow-y: auto;
+    background-color: #1c1c1c;
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 section h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 20px;
     border-bottom: 2px solid #4285f4;
     display: inline-block;
+    color: #ffffff;
 }
 
 .skills {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
 .skill-item {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .skill-item p {
-    margin: 0;
-    font-size: 14px;
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #ffffff;
 }
 
 .skill-bar {
     background-color: #4285f4;
-    height: 10px;
+    height: 12px;
     border-radius: 5px;
+    position: relative;
+}
+
+.skill-bar::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background-color: #ffffff;
+    border-radius: 5px;
+    animation: fillSkill 2s ease forwards;
+}
+
+@keyframes fillSkill {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
 }
 
 .portfolio-item {
-    background-color: #444;
+    background-color: #2c2c2c;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 form input, form textarea {
     width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: 15px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
     box-sizing: border-box;
+    background-color: #333;
+    color: #ffffff;
 }
 
 form button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #4285f4;
     border: none;
     color: #ffffff;
     cursor: pointer;
     font-size: 14px;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 form button:hover {
