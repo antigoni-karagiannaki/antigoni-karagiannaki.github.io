@@ -14,15 +14,27 @@ body {
     display: flex;
     width: 100%;
 }
-
+.cv-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.cv-btn:hover {
+    background-color: #45a049;
+}
 .hidden {
     display: none; 
 }
 
 /* Add this to your existing CSS */
 nav .social-icons img {
-    width: 30px; /* Adjust the size as needed */
-    height: 30px; /* Ensure the height matches the width for a perfect circle */
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Ensure the height matches the width for a perfect circle */
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image covers the entire area without distortion */
     border: 2px solid #ffffff; /* Optional: Add a border for better visibility */
