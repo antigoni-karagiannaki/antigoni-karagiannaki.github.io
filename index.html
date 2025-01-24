@@ -1,96 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+        <script defer src="script.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #3a3a3a;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="sidebar">
-            <div class="profile">
-                <img src="avatar.png" alt="Your Photo">
-                <h1>Your Name</h1>
-                <p>Computer Science Graduate</p>
-                <div class="social-icons">
-                    <a href="https://github.com" target="_blank">GitHub</a>
-                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    <nav>
+        <h1>Your Name</h1>
+        <p>Computer Science Graduate</p>
+        <div class="social-icons">
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+        <button class="cv-btn">Download CV</button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Explore my skills, projects, and experience.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a Computer Science graduate passionate about coding, problem-solving, and technology. I specialize in developing web applications and love learning new technologies.</p>
+        </section>
+
+        <section id="resume">
+            <h2>Resume</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Education</h3>
+                    <p><b>University of XYZ</b> (2018 - 2022)</p>
+                    <p>Bachelor of Science in Computer Science</p>
                 </div>
-                <button class="cv-btn">Download CV</button>
+                <div class="timeline-item">
+                    <h3>Experience</h3>
+                    <p>Job Title at Company (Year - Year)</p>
+                    <p>Job Description</p>
+                </div>
             </div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        </section>
 
-        <main>
-            <section id="home">
-                <h2>Welcome to My Portfolio</h2>
-                <p>Explore my skills, projects, and experience.</p>
-            </section>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>Here are some of my projects.</p>
+            <!-- Add your portfolio items here -->
+        </section>
 
-            <section id="about">
-                <h2>About Me</h2>
-                <p>I am a Computer Science graduate passionate about coding, problem-solving, and technology. I specialize in developing web applications and love learning new technologies.</p>
-            </section>
-
-            <section id="resume">
-                <h2>Resume</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h3>Education</h3>
-                        <p><b>University of XYZ</b> (2018 - 2022)</p>
-                        <p>Bachelor of Science in Computer Science</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Experience</h3>
-                        <p><b>Software Developer Intern</b> at ABC Company (2021)</p>
-                        <p>Developed a real-time dashboard for monitoring system health.</p>
-                    </div>
-                </div>
-
-                <h3>Skills</h3>
-                <div class="skills">
-                    <div class="skill-item">
-                        <p>JavaScript</p>
-                        <div class="skill-bar" style="width: 90%;"></div>
-                    </div>
-                    <div class="skill-item">
-                        <p>HTML & CSS</p>
-                        <div class="skill-bar" style="width: 100%;"></div>
-                    </div>
-                    <div class="skill-item">
-                        <p>Python</p>
-                        <div class="skill-bar" style="width: 85%;"></div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="portfolio">
-                <h2>Portfolio</h2>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">Project 1</div>
-                    <div class="portfolio-item">Project 2</div>
-                    <div class="portfolio-item">Project 3</div>
-                </div>
-            </section>
-
-            <section id="contact">
-                <h2>Contact</h2>
-                <form>
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </section>
-        </main>
-    </div>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me via email or social media.</p>
+            <!-- Add your contact information here -->
+        </section>
+    </main>
 </body>
 </html>
