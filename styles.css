@@ -18,7 +18,7 @@ body {
     display: inline-block;
     padding: 10px 20px;
     margin: 10px 0;
-    background-color: #4caf50;
+    background-color: #1e2549;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -30,15 +30,13 @@ body {
 .hidden {
     display: none; 
 }
-
-/* Add this to your existing CSS */
-nav .social-icons .profile-picture img {
-    width: 200px; /* Adjust the size as needed */
-    height: 200px; /* Ensure the height matches the width for a perfect circle */
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image covers the entire area without distortion */
-    border: 2px solid #ffffff; /* Optional: Add a border for better visibility */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+.profile-picture{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar {
