@@ -19,6 +19,16 @@ body {
     display: none; 
 }
 
+/* Add this to your existing CSS */
+nav .social-icons img {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Ensure the height matches the width for a perfect circle */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    border: 2px solid #ffffff; /* Optional: Add a border for better visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+}
+
 .sidebar {
     width: 25%;
     background-color: #282828;
