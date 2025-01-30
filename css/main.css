@@ -231,6 +231,11 @@ input[type="submit"]:focus {
   color: #0056b3;
 }
 
+
+.my-intro{
+  font-family: "Source Code Pro", monospace;
+}
+
 /* ============================================================================= 
 3. Page loadig animation
 ============================================================================= */
@@ -972,6 +977,23 @@ textarea.form-control, textarea.form-control:focus {
   opacity: .7;
 }
 /* --- End Info block with Icon --- */
+
+@keyframes glowing {
+  0% { box-shadow: 0 0 5px #253f78; }
+  50% { box-shadow: 0 0 20px #253f78; }
+  80% { box-shadow: 0 0 5px #253f78; }
+}
+
+.video-container video {
+  border-radius: 20px;
+  border: 2px solid #253f78;
+  margin-bottom: 20px;
+  animation: glowing 2s infinite alternate;
+}
+
+
+/* --- End Videos --- */
+
 
 /* --- Info Block with Borders --- */
 .lm-info-block {
