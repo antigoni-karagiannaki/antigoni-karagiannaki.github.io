@@ -211,6 +211,7 @@ input[type="submit"]:focus {
 /* Read More functionality */
 
 .education-summary .more-text {
+  margin-bottom: 0;
   display: none;
   /* font-family: 'Poppins', Helvetica, sans-serif; */
   font-size: 1em;
@@ -222,6 +223,8 @@ input[type="submit"]:focus {
   color: #007bff;
   cursor: pointer;
   text-decoration: underline;
+  font-size: 0.875em;
+  margin-top: 0.15em;
 }
 
 .read-more:hover {
