@@ -208,7 +208,25 @@ input[type="submit"]:focus {
   animation-fill-mode: both;
 }
 
+/* Read More functionality */
 
+.education-summary .more-text {
+  display: none;
+  /* font-family: 'Poppins', Helvetica, sans-serif; */
+  font-size: 1em;
+  line-height: 1.5;
+  color: inherit;  
+}
+
+.read-more {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.read-more:hover {
+  color: #0056b3;
+}
 
 /* ============================================================================= 
 3. Page loadig animation
@@ -1373,7 +1391,7 @@ textarea.form-control, textarea.form-control:focus {
   list-style: none;
 }
 
-.knowledges li {;
+.knowledges li {
   display: inline-block;
   background-color: #04b4e0;
   border-radius: 3px;

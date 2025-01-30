@@ -211,7 +211,7 @@
                     }
                 }
             });
-    
+                
             // Clients Slider
             $(".clients.owl-carousel").imagesLoaded().owlCarousel({
                 nav: true, // Show next/prev buttons.
@@ -235,7 +235,7 @@
                 }
             });
     
-    
+            
             //Form Controls
             $('.form-control')
                 .val('')

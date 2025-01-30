@@ -523,6 +523,23 @@ var PageTransitions = (function ($, options) {
 
     }
 
+    // Read More functionality
+    const readMoreLinks = $(".read-more");
+                    
+    readMoreLinks.each(function() {
+        $(this).on("click", function() {
+            const moreText = $(this).prev(".education-summary").find(".more-text");
+            if (moreText.css("display") === "none" || moreText.css("display") === "") {
+                moreText.css("display", "inline");
+                moreText.css("font-size", "inherit");
+                $(this).text("Read Less");
+            } else {
+                moreText.css("display", "none");
+                $(this).text("Read More");
+            }
+        });
+    });
+
     function onEndAnimation($pageWrapper, $nextPage, $currentPage) {
         resetPage($nextPage, $currentPage);
     }
