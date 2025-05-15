@@ -315,9 +315,9 @@ input[type="submit"]:focus {
     overflow: auto;
   }
 
-  /* .header-titles {
+  .header-titles {
 
-  } */
+  }
 
   /* --- Navigation --- */
   ul.main-menu {
@@ -1053,17 +1053,14 @@ textarea.form-control, textarea.form-control:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 /* Style for the internship logo */
-.left-part {
-  display: flex;
-  justify-content: space-between; /* Pushes the logo to the far right */
-  align-items: center; /* Aligns the text and logo vertically */
-}
-
 .internship-logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 50px; /* Adjust the size of the logo */
+  height: 50px; /* Ensure the height matches the width */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the entire area without distortion */
+  float: right; /* Aligns the logo to the right */
+  margin-left: 10px; /* Adds spacing between the logo and the text */
+  vertical-align: middle; /* Aligns the logo vertically with the text */
 }
 /* --- Testimonials --- */
 .testimonial {
