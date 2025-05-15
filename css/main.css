@@ -1058,9 +1058,12 @@ textarea.form-control, textarea.form-control:focus {
   height: 50px; /* Ensure the height matches the width */
   border-radius: 50%; /* Makes the image circular */
   object-fit: cover; /* Ensures the image covers the entire area without distortion */
-  float: right; /* Aligns the logo to the right */
-  margin-left: 10px; /* Adds spacing between the logo and the text */
-  vertical-align: middle; /* Aligns the logo vertically with the text */
+  float: right; 
+  /* Aligns the logo to the right */
+  margin-left: 10px; 
+  /* Adds spacing between the logo and the text */
+  vertical-align: middle; 
+  /* Aligns the logo vertically with the text */
 }
 /* --- Testimonials --- */
 .testimonial {
