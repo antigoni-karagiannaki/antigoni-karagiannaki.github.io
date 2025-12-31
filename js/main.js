@@ -66,7 +66,7 @@
     
         // Contact form validator
         $(function () {
-    
+            if ($.fn.validator) { console.log("okkkkkk")}
             $('#contact_form').validator();
     
             $('#contact_form').on('submit', function (e) {
@@ -120,6 +120,28 @@
     
         // On Document Load
         $(document).on('ready', function() {
+
+            // Initialize Hover Image Previews
+            $('[data-toggle="popover"]').popover({
+                html: true,
+                trigger: 'hover',
+                placement: 'top',
+                container: 'body', // Ensures the popover isn't cut off by section boundaries
+                content: function() {
+                    // Get the array of images from the data attribute
+                    var images = $(this).data('img-bundle');
+                    var html = '<div class="preview-bundle" style="display: flex; flex-direction: column; gap: 5px;">';
+                    if (Array.isArray(images)) {
+                        images.forEach(function(src) {
+                            // The src already starts with "img/" based on the HTML change above
+                            html += '<img src="' + src + '" style="width: 100%; border-radius: 4px; border: 1px solid #444;">';
+                        });
+                    }
+
+                    html += '</div>';
+                    return html;
+                }
+            });
             var movementStrength = 23;
             var height = movementStrength / $(document).height();
             var width = movementStrength / $(document).width();
@@ -234,8 +256,7 @@
                     }
                 }
             });
-    
-            
+
             //Form Controls
             $('.form-control')
                 .val('')

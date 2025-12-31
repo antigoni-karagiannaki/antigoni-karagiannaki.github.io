@@ -8,7 +8,7 @@
 /* ------------------------------------------------------------
 1. Fonts
 2. General Styles
-3. Page loadig animation
+3. Page loading animation
 4. Header
 5. Page Content
 6. Elements
@@ -201,6 +201,49 @@ input[type="submit"]:focus {
   background-color: #d5d5d5;
 }
 
+/* Styling for the reference buttons in 'What I Do' */
+.info-block-w-icon .btn-secondary {
+  padding: 5px 15px;
+  font-size: 12px;
+  margin-top: 10px;
+  border-radius: 5px; /* Matches your current form-control style */
+  border-color: #04b4e0; /* Matches your theme color */
+}
+
+.info-block-w-icon .btn-secondary i {
+  font-size: 14px;
+  margin-right: 5px;
+  color: #04b4e0;
+}
+
+/* Styling for the trigger text */
+.preview-trigger {
+  color: #04b4e0;
+  cursor: help;
+  font-weight: 600;
+}
+
+/* Customizing the Popover appearance */
+.popover {
+  background-color: #333;
+  border: 1px solid #444;
+  max-width: 300px;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+
+.popover-preview-img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  border: 1px solid #555;
+}
+
+.popover-header {
+  background-color: #222;
+  color: #04b4e0;
+  border-bottom: 1px solid #444;
+}
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -234,6 +277,29 @@ input[type="submit"]:focus {
 
 .my-intro{
   font-family: "Source Code Pro", monospace;
+}
+
+.typewriter p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
 
 /* ============================================================================= 
@@ -314,10 +380,10 @@ input[type="submit"]:focus {
     padding: 65px 30px 45px;
     overflow: auto;
   }
-
+/* 
   .header-titles {
 
-  }
+  } */
 
   /* --- Navigation --- */
   ul.main-menu {
@@ -1080,7 +1146,7 @@ textarea.form-control, textarea.form-control:focus {
 
 /* Style for the thesis image */
 .thesis-image img {
-  max-width: 60%; /* Ensure the image is responsive */
+  max-width: 40%; /* Ensure the image is responsive */
   height: auto; /* Maintain aspect ratio */
   margin-top: 15px; /* Add spacing above the image */
   border: 1px solid #ddd; /* Optional: Add a border */
@@ -1089,9 +1155,11 @@ textarea.form-control, textarea.form-control:focus {
 }
 /* Style for the internship logo */
 .internship-logo {
-  width: 50px; /* Adjust the size of the logo */
-  height: 50px; /* Ensure the height matches the width */
-  border-radius: 50%; /* Makes the image circular */
+  width: 45px; /* Adjust the size of the logo */
+  height: 45px; /* Ensure the height matches the width */
+  size: 60%;
+  background-color: #e5e4e9;
+  border-radius: 35%; /* Makes the image circular */
   object-fit: cover; /* Ensures the image covers the entire area without distortion */
   float: right; 
   /* Aligns the logo to the right */
@@ -1100,6 +1168,28 @@ textarea.form-control, textarea.form-control:focus {
   vertical-align: middle; 
   /* Aligns the logo vertically with the text */
 }
+
+/* Pushes date and logo to the right, against the vertical divider */
+.timeline-second-style .left-part {
+    text-align: right !important; /* Forces text and logos to the right */
+    padding-right: 20px !important; /* Adjusts the gap between logo and the blue dot */
+    width: 30%; /* Keeps the consistent layout of the template */
+}
+
+/* Specific styling for the logos to ensure they lead to the right */
+.intern-logo-rect, 
+.timeline-second-style .certi-logo {
+    background-color: oldlace; /* Removes grey box */
+    display: inline-block; /* Allows right-alignment within the parent div */
+    width: auto !important;
+    max-width: 90px !important; 
+    height: 40px !important; 
+    margin: 8px 0 0 auto !important; /* Pushes the image to the right margin */
+    object-fit: contain;
+    border: none !important;
+}
+
+
 /* --- Testimonials --- */
 .testimonial {
   text-align: center;
@@ -1347,9 +1437,18 @@ textarea.form-control, textarea.form-control:focus {
   display: block;
   margin-bottom: 10px;
 }
+.item-logo img{
+  background-color: oldlace;
+  opacity: 60%;
+  padding: 3px;
+}
 
 .timeline-second-style .item-logo img {
   max-height: 40px;
+}
+
+.item-logo:hover{
+  color: #ffe0e0;
 }
 /* --- End Timeline (Education & Experience) --- */
 
