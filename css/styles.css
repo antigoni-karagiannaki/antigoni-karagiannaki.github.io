@@ -208,6 +208,16 @@ input[type="submit"]:focus {
   animation-fill-mode: both;
 }
 
+.course-table { 
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.course-table td {
+  padding: 15px 25px;
+  text-align: center; 
+  vertical-align: middle;
+}
 
 
 /* ============================================================================= 
@@ -1334,15 +1344,19 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 .skills-second-style .skill-container.skill-7 .skill-percentage {
-  width: 100%;
+  width: 45%;
 }
 
 .skills-second-style .skill-container.skill-8 .skill-percentage {
-  width: 75%;
+  width: 70%;
 }
 
 .skills-second-style .skill-container.skill-9 .skill-percentage {
-  width: 90%;
+  width: 65%;
+}
+
+.skills-second-style .skill-container.skill-10 .skill-percentage {
+  width: 100%;
 }
 
 /* --- End of Skills Values --- */
@@ -1372,7 +1386,7 @@ textarea.form-control, textarea.form-control:focus {
   list-style: none;
 }
 
-.knowledges li {;
+.knowledges li {
   display: inline-block;
   background-color: #04b4e0;
   border-radius: 3px;
@@ -4826,4 +4840,18 @@ blockquote {
 .animated-section-delay1000 {
 	-webkit-animation-delay: 1s;
 	animation-delay: 1s;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+
+  
+}
+
+.course-table td {
+  /* opacity is set to 0.5 for all cells */
+  opacity: 0.5;
+  padding: 15px 25px;
 }

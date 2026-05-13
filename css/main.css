@@ -603,6 +603,9 @@ input[type="submit"]:focus {
   opacity: 1;
   background-color: rgba(255,255,255,.2);
 }
+
+
+
 /* --- End Social Links --- */
 
 .header-buttons {
@@ -1077,6 +1080,30 @@ textarea.form-control, textarea.form-control:focus {
   color: #04b4e0;
   opacity: .7;
 }
+
+/* --- Services grid fix --- */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.services-grid > .service-card {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .services-grid > .service-card {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .services-grid > .service-card {
+    width: 50%;
+  }
+}
 /* --- End Info block with Icon --- */
 
 @keyframes glowing {
@@ -1533,15 +1560,19 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 .skills-second-style .skill-container.skill-7 .skill-percentage {
-  width: 100%;
+  width: 45%;
 }
 
 .skills-second-style .skill-container.skill-8 .skill-percentage {
-  width: 75%;
+  width: 70%;
 }
 
 .skills-second-style .skill-container.skill-9 .skill-percentage {
-  width: 90%;
+  width: 65%;
+}
+
+.skills-second-style .skill-container.skill-10 .skill-percentage {
+  width: 100%;
 }
 
 /* --- End of Skills Values --- */
@@ -3192,4 +3223,58 @@ blockquote {
     margin: 0;
     line-height: 1;
     border: none;
+}
+
+summary{
+  font-size: 14px;
+  font-weight: 500;
+  color: #04b4e0;
+  cursor: pointer;
+}
+
+.course-table { 
+  width: 100%;
+  border-collapse: collapse;
+  outline: #8ba1bc solid 1px;
+}
+
+.course-table td {
+  opacity: 0.8;
+  outline: #8ba1bc solid 1px;
+  text-align: left; 
+  padding-left: 15px;
+  vertical-align: middle;
+}
+.course-table :hover {
+  opacity: 1;
+  background-color: #333;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Style the button that is used to open and close the collapsible content
+.collapsible_courses {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 8px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+} */
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* .collapsible_courses.active, .collapsible_courses:hover {
+  background-color: #ccc;
+} */
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  transition: max-height 0.2s ease-out;
 }

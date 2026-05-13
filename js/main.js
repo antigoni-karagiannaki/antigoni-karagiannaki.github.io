@@ -121,6 +121,21 @@
         // On Document Load
         $(document).on('ready', function() {
 
+            var coll = document.getElementsByClassName("collapsible_courses");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+
             // Initialize Hover Image Previews
             $('[data-toggle="popover"]').popover({
                 html: true,
@@ -332,6 +347,8 @@
             //$("#map").addMarker({
             //    address: "S601 Townsend Street, San Francisco, California, USA", // Your Address. Change it
             //});
+
+            
         });
     
     })(jQuery);
