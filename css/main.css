@@ -1870,6 +1870,61 @@ textarea.form-control, textarea.form-control:focus {
 /* --- End of Portfolio --- */
 
 /* --- Blog --- */
+.blog-intro-carousel {
+  margin: 0 0 2em;
+}
+
+.blog-intro-slide {
+  aspect-ratio: 16 / 9;
+  background: #111;
+}
+
+.blog-intro-slide video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.blog-intro-carousel .owl-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.blog-intro-carousel .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.blog-intro-carousel .owl-nav button.owl-prev,
+.blog-intro-carousel .owl-nav button.owl-next {
+  padding: 0;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background: #444;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.blog-intro-carousel .owl-nav button.owl-prev:hover,
+.blog-intro-carousel .owl-nav button.owl-next:hover {
+  border-color: #04b4e0;
+  background: #04b4e0;
+}
+
 .blog-masonry {
   margin: 0 -1em 1.8em;
 }

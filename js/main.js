@@ -193,6 +193,55 @@
             $('.sidebar-toggle').on("click", function () {
                 $('#blog-sidebar').toggleClass('open');
             });
+
+            // Blog introduction videos
+            var $blog_section = $('section[data-id="blog"]');
+            var $blog_intro_carousel = $('.blog-intro-carousel').owlCarousel({
+                items: 1,
+                loop: false,
+                nav: true,
+                navElement: 'button',
+                dots: false,
+                navText: [
+                    '<span class="sr-only">Previous video</span><i class="fas fa-chevron-left" aria-hidden="true"></i>',
+                    '<span class="sr-only">Next video</span><i class="fas fa-chevron-right" aria-hidden="true"></i>'
+                ]
+            });
+
+            function playActiveBlogVideo() {
+                if (!$blog_section.hasClass('section-active')) {
+                    return;
+                }
+
+                var activeVideo = $blog_intro_carousel.find('.owl-item.active video')[0];
+                if (activeVideo) {
+                    activeVideo.muted = true;
+                    var playRequest = activeVideo.play();
+                    if (playRequest && typeof playRequest.catch === 'function') {
+                        playRequest.catch(function() {});
+                    }
+                }
+            }
+
+            $blog_intro_carousel.on('changed.owl.carousel', function() {
+                $(this).find('video').each(function() {
+                    this.pause();
+                    this.currentTime = 0;
+                });
+            }).on('translated.owl.carousel', playActiveBlogVideo);
+
+            var blogSectionObserver = new MutationObserver(function() {
+                if ($blog_section.hasClass('section-active')) {
+                    playActiveBlogVideo();
+                } else {
+                    $blog_intro_carousel.find('video').each(function() {
+                        this.pause();
+                    });
+                }
+            });
+            blogSectionObserver.observe($blog_section[0], { attributes: true, attributeFilter: ['class'] });
+            playActiveBlogVideo();
+            window.setTimeout(playActiveBlogVideo, 1000);
     
             // Initialize Portfolio grid
             var $portfolio_container = $(".portfolio-grid");
@@ -221,7 +270,7 @@
                 animateOut: 'animated-section-scaleDown',
                 animateIn: 'animated-section-scaleUp'
             });
-    
+
             // Testimonials Slider
             $(".testimonials.owl-carousel").owlCarousel({
                 nav: true, // Show next/prev buttons.
